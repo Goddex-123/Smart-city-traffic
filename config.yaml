@@ -1,0 +1,133 @@
+# Smart City Traffic Configuration
+
+# Data Generation Parameters
+data_generation:
+  num_road_segments: 120
+  num_intersections: 30
+  start_date: "2024-01-01"
+  end_date: "2024-06-30"
+  time_resolution: 15  # minutes
+  
+  # Traffic patterns
+  morning_rush_start: 7
+  morning_rush_end: 9
+  evening_rush_start: 17
+  evening_rush_end: 19
+  
+  # Random events
+  accident_probability: 0.001  # per segment per hour
+  weather_impact_probability: 0.15
+  
+  # Speed limits (km/h)
+  highway_speed_limit: 100
+  arterial_speed_limit: 60
+  local_speed_limit: 40
+
+# Data Processing
+preprocessing:
+  test_size: 0.2
+  validation_size: 0.1
+  random_state: 42
+  
+  # Feature engineering
+  lag_features: [1, 2, 3, 6, 12, 24]  # 15min intervals
+  rolling_window_sizes: [4, 8, 12]  # 1hr, 2hr, 3hr
+  
+  # Congestion thresholds (% of speed limit)
+  free_flow_threshold: 0.8
+  moderate_threshold: 0.6
+  heavy_threshold: 0.4
+
+# Model Training
+models:
+  random_state: 42
+  cv_folds: 5
+  
+  # Random Forest
+  random_forest:
+    n_estimators: 200
+    max_depth: 20
+    min_samples_split: 5
+    n_jobs: -1
+  
+  # XGBoost
+  xgboost:
+    n_estimators: 300
+    max_depth: 8
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+  
+  # LSTM
+  lstm:
+    units: 128
+    dropout: 0.2
+    epochs: 50
+    batch_size: 64
+    learning_rate: 0.001
+  
+  # Prophet
+  prophet:
+    changepoint_prior_scale: 0.05
+    seasonality_prior_scale: 10
+    seasonality_mode: 'multiplicative'
+
+# Traffic Signal Optimization
+optimization:
+  min_green_time: 20  # seconds
+  max_green_time: 120
+  yellow_time: 3
+  all_red_time: 2
+  
+  # Optimization objectives (weights)
+  weight_wait_time: 0.4
+  weight_throughput: 0.4
+  weight_emissions: 0.2
+  
+  # Simulation
+  simulation_duration: 3600  # seconds (1 hour)
+  vehicle_length: 4.5  # meters
+  safety_distance: 2  # meters
+
+# Benefits Quantification
+benefits:
+  # CO2 emission factors (g/km)
+  co2_moving: 120
+  co2_idle: 180
+  
+  # Economic values
+  fuel_cost_per_liter: 1.5  # USD
+  fuel_consumption_idle: 0.6  # liters/hour
+  
+  # Time value
+  time_value_per_hour: 15  # USD
+
+# Visualization
+dashboard:
+  port: 8501
+  theme: "dark"
+  map_center: [40.7128, -74.0060]  # NYC coordinates
+  map_zoom: 12
+  
+  # Color schemes
+  congestion_colors:
+    free_flow: "#2ecc71"
+    moderate: "#f39c12"
+    heavy: "#e74c3c"
+    severe: "#8e44ad"
+
+# Paths
+paths:
+  data_raw: "data/raw"
+  data_processed: "data/processed"
+  models: "data/models"
+  reports: "reports"
+  figures: "reports/figures"
+  logs: "logs"
+
+# Logging
+logging:
+  level: "INFO"
+  format: "<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan> - <level>{message}</level>"
+  rotation: "10 MB"
+  retention: "30 days"

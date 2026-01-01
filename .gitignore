@@ -1,0 +1,39 @@
+# logs/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (optional - uncomment if data is large)
+# data/raw/*.csv
+# data/raw/*.pkl
+# data/models/*.h5
+# data/models/*.pkl
+
+# Temporary files
+*.tmp
+*.log
