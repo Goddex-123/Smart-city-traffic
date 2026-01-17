@@ -1,5 +1,7 @@
 # 🚦 Smart City Traffic Congestion Prediction & Optimization System
 
+> ⚠️ **Educational Portfolio Project**: This system uses **synthetic traffic data** to demonstrate ML-based traffic optimization. Real-world deployment would require integration with actual traffic sensor networks.
+
 > An enterprise-level AI-powered system for traffic congestion prediction and signal optimization using big data analytics, machine learning, and optimization algorithms.
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -30,6 +32,7 @@ Urban traffic congestion costs billions in lost productivity and environmental d
 ### Solution
 
 An integrated system that:
+
 1. **Analyzes** traffic patterns across 120+ road segments
 2. **Predicts** congestion using ML (Random Forest, XGBoost, LSTM)
 3. **Optimizes** traffic signal timings using differential evolution
@@ -39,29 +42,34 @@ An integrated system that:
 ## ✨ Key Features
 
 ### 📊 Data Analytics
+
 - **120 road segments** monitored with 15-minute resolution
 - **6 months** of synthetic traffic data (900,000+ records)
 - **Temporal & spatial** analysis of traffic patterns
 - **Feature engineering**: lag features, rolling statistics, cyclical encoding
 
 ### 🤖 Machine Learning
+
 - **Classification Models**: Random Forest, XGBoost, Neural Networks (85%+ accuracy)
 - **Time Series Models**: ARIMA, Prophet, LSTM (MAPE < 15%)
 - **Multi-class congestion prediction**: Free Flow, Moderate, Heavy, Severe
 - **Feature importance** analysis and model interpretability
 
 ### ⚡ Traffic Optimization
+
 - **Signal timing optimization** using differential evolution
 - **Multi-objective optimization**: minimize wait time, maximize throughput, reduce emissions
 - **Microscopic traffic simulation** for validation
 - **20-30% reduction** in congestion and wait times
 
 ### 🌍 Impact Quantification
+
 - **CO₂ emissions reduction** calculation
 - **Economic benefits** estimation (time savings, fuel savings)
 - **ROI analysis** for deployment
 
 ### 📍 Interactive Dashboard
+
 - **Real-time traffic map** with live congestion visualization
 - **Segment-level analysis** and forecasting
 - **Model performance** metrics and comparisons
@@ -112,6 +120,7 @@ An integrated system that:
 ## 🚀 Installation
 
 ### Prerequisites
+
 - Python 3.8 or higher
 - pip package manager
 - 4GB+ RAM recommended
@@ -119,11 +128,13 @@ An integrated system that:
 ### Setup
 
 1. **Clone the repository** (or navigate to project folder)
+
 ```bash
 cd smart-city-traffic
 ```
 
 2. **Create virtual environment**
+
 ```bash
 python -m venv venv
 
@@ -135,6 +146,7 @@ source venv/bin/activate
 ```
 
 3. **Install dependencies**
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -174,6 +186,7 @@ streamlit run src/visualization/dashboard.py
 ### Individual Components
 
 **Generate data only:**
+
 ```python
 from src.data import TrafficDataGenerator
 
@@ -182,6 +195,7 @@ generator.generate_all()
 ```
 
 **Train specific model:**
+
 ```python
 from src.models import CongestionClassifier
 
@@ -190,6 +204,7 @@ classifier.train_all()
 ```
 
 **Run optimization:**
+
 ```python
 from src.optimization import SignalOptimizer
 
@@ -239,19 +254,19 @@ smart-city-traffic/
 
 ### Machine Learning Performance
 
-| Model | Accuracy | Precision | Recall | F1-Score |
-|-------|----------|-----------|--------|----------|
-| Random Forest | 85.3% | 84.7% | 85.3% | 84.9% |
-| **XGBoost** | **87.2%** | **86.9%** | **87.2%** | **87.0%** |
-| Neural Network | 86.1% | 85.8% | 86.1% | 85.9% |
+| Model          | Accuracy  | Precision | Recall    | F1-Score  |
+| -------------- | --------- | --------- | --------- | --------- |
+| Random Forest  | 85.3%     | 84.7%     | 85.3%     | 84.9%     |
+| **XGBoost**    | **87.2%** | **86.9%** | **87.2%** | **87.0%** |
+| Neural Network | 86.1%     | 85.8%     | 86.1%     | 85.9%     |
 
 ### Forecasting Performance
 
-| Model | RMSE | MAE | MAPE |
-|-------|------|-----|------|
-| ARIMA | 8.5 | 6.2 | 12.3% |
+| Model       | RMSE    | MAE     | MAPE      |
+| ----------- | ------- | ------- | --------- |
+| ARIMA       | 8.5     | 6.2     | 12.3%     |
 | **Prophet** | **7.8** | **5.8** | **11.2%** |
-| LSTM | 8.1 | 6.0 | 11.8% |
+| LSTM        | 8.1     | 6.0     | 11.8%     |
 
 ### Optimization Results
 
@@ -264,6 +279,7 @@ smart-city-traffic/
 ## 🛠️ Technologies
 
 ### Core Technologies
+
 - **Python 3.8+**: Primary programming language
 - **PySpark**: Big data processing (simulated)
 - **TensorFlow/Keras**: Deep learning models
@@ -271,18 +287,21 @@ smart-city-traffic/
 - **XGBoost**: Gradient boosting
 
 ### Time Series & Optimization
+
 - **Prophet**: Facebook's forecasting library
 - **Statsmodels**: ARIMA implementation
 - **SciPy**: Optimization algorithms
 - **PuLP**: Linear programming
 
 ### Visualization & Dashboard
+
 - **Streamlit**: Interactive web dashboard
 - **Plotly**: Interactive charts
 - **Folium**: Interactive maps
 - **Seaborn/Matplotlib**: Static visualizations
 
 ### Utilities
+
 - **Pandas/NumPy**: Data manipulation
 - **Loguru**: Logging
 - **PyYAML**: Configuration management
@@ -290,12 +309,14 @@ smart-city-traffic/
 ## 🔮 Future Scope
 
 ### Short-term Enhancements
+
 1. **Real Data Integration**: Connect to actual traffic sensors/APIs
 2. **Deep Learning Advanced**: Attention mechanisms, Graph Neural Networks
 3. **Real-time Predictions**: Streaming data processing with Apache Kafka
 4. **Mobile App**: Real-time traffic updates for commuters
 
 ### Long-term Vision
+
 1. **Multi-city Deployment**: Scale to multiple cities
 2. **V2X Integration**: Vehicle-to-everything communication
 3. **Autonomous Vehicle Coordination**: Optimize for mixed traffic
@@ -321,4 +342,4 @@ For questions or collaboration opportunities, feel free to reach out!
 
 **Built with ❤️ for Smart Cities**
 
-*This project demonstrates enterprise-level data science capabilities combining big data analytics, machine learning, optimization, and full-stack development.*
+_This project demonstrates enterprise-level data science capabilities combining big data analytics, machine learning, optimization, and full-stack development._
