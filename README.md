@@ -8,6 +8,9 @@
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15-orange.svg)](https://www.tensorflow.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.29-red.svg)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Click_Here-brightgreen?style=for-the-badge)](https://smart-city-traffic-sohambarate.streamlit.app/)
+
+> **🎯 Try it now!** Click the **Live Demo** badge above to use the app instantly!
 
 ## 📋 Table of Contents
 
