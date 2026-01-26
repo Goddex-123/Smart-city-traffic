@@ -12,6 +12,16 @@
 
 > **🎯 Try it now!** Click the **Live Demo** badge above to use the app instantly!
 
+---
+
+### 🛠️ Maintenance Update: Jan 26, 2026
+
+- Verified dependency compatibility with latest Streamlit versions.
+- Updated project documentation and roadmap.
+- Confirmed live demo stability.
+
+---
+
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
